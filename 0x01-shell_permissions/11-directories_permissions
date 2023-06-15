@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod ugo+x < find . -not -name "." -type d
+find . -type d -exec chmod ugo+x {} \;
