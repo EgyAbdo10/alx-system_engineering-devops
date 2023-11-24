@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# list all the cd files (only the part after the dash)
+
+for i in *
+do
+cut -d "-" -f2 <<< "$i"
+done
