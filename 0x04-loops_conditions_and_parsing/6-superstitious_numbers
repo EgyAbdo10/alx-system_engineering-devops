@@ -9,7 +9,7 @@ case $i in
 echo "$i"
 echo "bad luck from China"
 ;;
-8)
+9)
 echo "$i"
 echo "bad luck from Japan"
 ;;
