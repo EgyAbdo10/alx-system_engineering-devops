@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# display: username user id Home directory path for the user
+
+cut -d":" -f1,2,3 <<< "$(cat "/etc/passwd")"
