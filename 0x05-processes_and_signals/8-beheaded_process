@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# kill a program
+
+pid=$(pgrep -f "./7-highlander")
+kill -9 "$pid"
