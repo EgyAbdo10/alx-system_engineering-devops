@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # stop the 4-to_infinity_and_beyond program by using pkill
 
-pkill -15 bash
+pkill -15 -f "./4-to_infinity_and_beyond"
