@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# get the file pid
+
+pgrep bash | tail -n 1
