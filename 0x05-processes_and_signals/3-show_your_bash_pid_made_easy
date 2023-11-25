@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# get a list of all running "bash" PID
+
+for i in `pgrep bash`
+do
+echo "$i bash"
+done
