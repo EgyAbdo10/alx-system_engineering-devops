@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+pid=$(pgrep -f "./100-process_and_pid_file")
+kill -2 "$pid"
+kill -15 "$pid"
