@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # stop the 4-to_infinity_and_beyond program
 
-pid=`pgrep bash | tail -n 3 | head -n 1`
+pid=`ps -aux | grep ./4-to_infinity_and_beyond | head -n 1 | awk '{print $2}'`
 kill -15 $pid
