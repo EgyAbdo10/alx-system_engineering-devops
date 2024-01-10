@@ -1,1 +1,1 @@
-this is teh alx web infrastrucure design project
+this is the alx web infrastrucure design project
