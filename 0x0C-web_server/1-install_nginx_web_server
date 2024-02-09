@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# change configurations of an Nginx server
+sudo apt-get -y update
+sudo apt-get -y install nginx
+# sed -i "s/listen\s+(\[::]:)+[0-9]+\s+default_server;/listen [::]:80 default_server;/g" "/etc/nginx/sites-available/default"
+# sed -i "s/listen\s+[0-9]+\s+default_server;/listen 80 default_server;/g" "/etc/nginx/sites-available/default"
+echo "Hello World!" > /var/www/html/index.nginx-debian.html
+sudo service nginx start
