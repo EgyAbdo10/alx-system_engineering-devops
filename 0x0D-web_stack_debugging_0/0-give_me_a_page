@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # debugging a web stack
 
-sudo get-apt -y update
-sudo get-apt install -y apache2
-echo "Hello Holberton" | sudo tee /var/www/html/index.html
+# sudo get-apt -y update
+# sudo get-apt install -y apache2
+echo "Hello Holberton" > /var/www/html/index.html
 sudo service apache2 start
