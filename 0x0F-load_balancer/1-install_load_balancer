@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# configure the load balancer
+
+sudo apt-get -y install --no-install-recommends software-properties-common
+sudo add-apt-repository -y ppa:vbernat/haproxy-2.9
+sudo apt-get -y install haproxy=2.9.\*
+sudo systemctl start haproxy
+sudo systemctl enable haproxy
+sudo chmod 766 /etc/haproxy/haproxy.cfg
+sudo echo -e "\nbackend first\n\tbalance roundrobin\n\tserver 433823-web-01 52.23.179.58:80\n\tserver 433823-web-02 54.90.36.155:80\n" >> /etc/haproxy/haproxy.cfg 
+sudo systemctl reload haproxy
