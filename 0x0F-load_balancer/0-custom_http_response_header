@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# configure two server and add the header "X-Served-By" in the response
+
+sudo apt-get -y update
+sudo apt-get -y install nginx
+sudo apt-get -y install nginx-extras
+sudo sed -i '/listen 80 default_server/a more_set_headers "X-Served-By: '$(hostname)'"' /etc/nginx/sites-available/default
+sudo service nginx restart
