@@ -13,7 +13,7 @@ frontend front
     default_backend back
 backend back
     balance roundrobin
-    server 1542-web-01 34.73.222.49:80 check
-    server 1542-web-02 	54.82.121.70:80 check" >> /etc/haproxy/haproxy.cfg
+    server 433823-web-01 52.23.179.58:80 check
+    server 433823-web-02 54.90.36.155:80 check" >> /etc/haproxy/haproxy.cfg
 
 sudo service haproxy restart
