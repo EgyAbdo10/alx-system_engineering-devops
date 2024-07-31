@@ -11,7 +11,7 @@ if __name__ == "__main__":
     emp_url = f"https://jsonplaceholder.typicode.com/users/{emp_id}"
     emp_response = requests.get(emp_url)
     # print(response.text)
-    emp_name = emp_response.json()["name"]
+    emp_name = emp_response.json()["username"]
     tasks_url = f"https://jsonplaceholder.typicode.com/todos?userId={emp_id}"
     tasks_response = requests.get(tasks_url)
     tasks_list = tasks_response.json()
