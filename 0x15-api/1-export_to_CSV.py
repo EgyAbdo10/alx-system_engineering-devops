@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""get data from https://jsonplaceholder.typicode.com/ and export csv file"""
+"""get data from https://jsonplaceholder.typicode.com/"""
 
 
 import requests
