@@ -18,4 +18,4 @@ if __name__ == "__main__":
     with open(f'{emp_id}.csv', "w") as f:
         for task in tasks_list:
             f.write(f'"{emp_id}","{emp_name}",' +
-                    '"{task["completed"]}","{task["title"]}"\n')
+                    f'"{task["completed"]}","{task["title"]}"\n')
