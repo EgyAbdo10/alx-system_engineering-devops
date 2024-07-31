@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 """get data from https://jsonplaceholder.typicode.com/"""
-
-
 import requests
 from sys import argv
 import pandas as pd
