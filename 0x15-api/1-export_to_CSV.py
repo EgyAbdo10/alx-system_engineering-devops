@@ -1,0 +1,27 @@
+#!/usr/bin/python3
+"""
+get data from https://jsonplaceholder.typicode.com adn export a csv file
+and records are as:
+"USER_ID","USERNAME","TASK_COMPLETED_STATUS","TASK_TITLE"
+and file name is USER_ID.csv
+"""
+
+
+import requests
+from sys import argv
+import pandas as pd
+
+
+if __name__ == "__main__":
+    emp_id = argv[1]
+    emp_url = f"https://jsonplaceholder.typicode.com/users/{emp_id}"
+    emp_response = requests.get(emp_url)
+    # print(response.text)
+    emp_name = emp_response.json()["name"]
+    tasks_url = f"https://jsonplaceholder.typicode.com/todos?userId={emp_id}"
+    tasks_response = requests.get(tasks_url)
+    tasks_list = tasks_response.json()
+    with open(f'{emp_id}.csv', "w") as f:
+        for task in tasks_list:
+            f.write(f'"{emp_id}","{emp_name}",' +
+                    '"{task["completed"]}","{task["title"]}"\n')
