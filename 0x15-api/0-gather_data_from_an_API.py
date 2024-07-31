@@ -23,5 +23,5 @@ if __name__ == "__main__":
             tasks_completed_number += 1
             tasks_completed_titles += f"\t{task['title']}\n"
     print(f"Employee {emp_name} is done with tasks"
-          + f"({total_tasks_number}/{tasks_completed_number}):")
+          + f"({tasks_completed_number}/{total_tasks_number}):")
     print(tasks_completed_titles, end="")
