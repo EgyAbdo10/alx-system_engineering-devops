@@ -1,10 +1,5 @@
 #!/usr/bin/python3
-"""
-get data from https://jsonplaceholder.typicode.com adn export a csv file
-and records are as:
-"USER_ID","USERNAME","TASK_COMPLETED_STATUS","TASK_TITLE"
-and file name is USER_ID.csv
-"""
+"""get data from https://jsonplaceholder.typicode.com/ and export csv file"""
 
 
 import requests
