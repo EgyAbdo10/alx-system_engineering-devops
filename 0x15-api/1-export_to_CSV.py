@@ -4,7 +4,6 @@ and export it as a csv file
 """
 import requests
 from sys import argv
-import pandas as pd
 
 
 if __name__ == "__main__":
