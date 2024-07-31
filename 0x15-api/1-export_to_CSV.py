@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""get data from https://jsonplaceholder.typicode.com/"""
+"""get data from https://jsonplaceholder.typicode.com/
+and export it as a csv file
+"""
 import requests
 from sys import argv
 import pandas as pd
