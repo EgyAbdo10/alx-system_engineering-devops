@@ -21,7 +21,7 @@ if __name__ == "__main__":
     for task in tasks_list:
         if task["completed"]:
             tasks_completed_number += 1
-            tasks_completed_titles += f"     {task['title']}\n"
+            tasks_completed_titles += f"\t {task['title']}\n"
     print(f"Employee {emp_name} is done with tasks"
           + f"({tasks_completed_number}/{total_tasks_number}):")
     print(tasks_completed_titles, end="")
