@@ -4,7 +4,6 @@ and export it as a json file
 """
 import json
 import requests
-from sys import argv
 
 
 if __name__ == "__main__":
@@ -29,4 +28,5 @@ if __name__ == "__main__":
         emp_url = f"https://jsonplaceholder.typicode.com/users/{emp_id}"
         emp_response = requests.get(emp_url)
     with open('todo_all_employees.json', "w") as f:
-        json.dump(emp_dict_list, f)
+        for record in emp_dict_list:
+            json.dump(record, f)
