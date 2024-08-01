@@ -11,7 +11,7 @@ if __name__ == "__main__":
     emp_url = f"https://jsonplaceholder.typicode.com/users/{emp_id}"
     emp_response = requests.get(emp_url)
     emp_name = emp_response.json()["username"]
-    emp_dict_list = []
+    records_dict = {}
     while emp_response.ok:
         tasks_url = ("https://jsonplaceholder" +
                      f".typicode.com/todos?userId={emp_id}")
@@ -23,10 +23,9 @@ if __name__ == "__main__":
             tasks_list_of_dict.append({"username": emp_name,
                                        "task": task["title"],
                                        "completed": task["completed"]})
-        emp_dict_list.append({str(emp_id): tasks_list_of_dict})
+        records_dict[str(emp_id)] = tasks_list_of_dict
         emp_id += 1
         emp_url = f"https://jsonplaceholder.typicode.com/users/{emp_id}"
         emp_response = requests.get(emp_url)
     with open('todo_all_employees.json', "w") as f:
-        for record in emp_dict_list:
-            json.dump(record, f)
+        json.dump(records_dict, f)
