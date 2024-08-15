@@ -14,10 +14,12 @@ def top_ten(subreddit):
     params = {"limit": 10}
     response = requests.get(url=url, allow_redirects=False,
                             headers=headers, params=params)
-    if response == 404:
-        return None
+    if response != 200:
+        print("None")
+        return
 
     data = response.json().get("data").get("children")
     for item in data:
         title = item.get("data").get("title")
         print(title)
+        return
