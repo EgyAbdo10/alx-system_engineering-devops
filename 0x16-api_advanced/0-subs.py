@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 """get the numebr of active subscribers of a subreddit"""
 
-from sys import argv
+
 import requests
+from sys import argv
 
 
 def number_of_subscribers(subreddit):
