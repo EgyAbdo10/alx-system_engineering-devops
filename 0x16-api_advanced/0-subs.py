@@ -14,8 +14,8 @@ def number_of_subscribers(subreddit):
         "rv:15.0) Gecko/20100101 Firefox/15.0.1"
     }
 
-    response = requests.get(url, allow_redirects=False)
-    if response.status_code >= 400:
+    response = requests.get(url, headers=headers, allow_redirects=False)
+    if response.status_code == 400:
         return 0
 
     data_dict = response.json()
