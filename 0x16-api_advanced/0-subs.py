@@ -16,4 +16,5 @@ def number_of_subscribers(subreddit):
     data_dict = response.json()
     return data_dict["data"]["active_user_count"]
 
+
 print(number_of_subscribers(argv[1]))
