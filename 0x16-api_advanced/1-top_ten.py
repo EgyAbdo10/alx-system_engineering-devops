@@ -19,9 +19,7 @@ def top_ten(subreddit):
         return
 
     data = response.json().get("data").get("children")
-    i = 0
     for item in data:
         title = item.get("data").get("title")
         print(title)
-        i += 1
     return
