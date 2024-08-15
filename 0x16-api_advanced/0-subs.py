@@ -3,7 +3,7 @@
 
 
 import requests
-from sys import argv
+import sys
 
 
 def number_of_subscribers(subreddit):
@@ -18,4 +18,4 @@ def number_of_subscribers(subreddit):
     return data_dict["data"]["active_user_count"]
 
 
-print(number_of_subscribers(argv[1]))
+print(number_of_subscribers(sys.argv[1]))
