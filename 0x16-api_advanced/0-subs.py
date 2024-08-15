@@ -19,4 +19,4 @@ def number_of_subscribers(subreddit):
 
 
 if len(sys.argv) == 2:
-    number_of_subscribers(sys.argv[1])
+    print(number_of_subscribers(sys.argv[1]))
