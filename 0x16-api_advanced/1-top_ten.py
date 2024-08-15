@@ -15,6 +15,8 @@ def top_ten(subreddit):
     if response == 404:
         return None
 
-    data = response.json().get("children")
+    data = response.json().get("data").get("children")
     for item in data:
-        print(item.get("title"))
+        title = item.get("data").get("title")
+        if len(title.strip()) != 0:
+            print(title)
