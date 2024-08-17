@@ -1,1 +1,1 @@
-this is teh alx postmortem project
+this is the alx postmortem project
