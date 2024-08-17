@@ -1,7 +1,7 @@
 # fix the web stack 3
 
-exec {
-    command => 'sed -i 's/phpp/php/g' wp-settings.php',
+exec { 'replace phpp with php':
+    command => '/bin/sed -i "s/phpp/php/g" /var/www/html/wp-settings.php',
 }
 
 # exec { 'create_file':
