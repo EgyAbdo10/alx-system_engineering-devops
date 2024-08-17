@@ -8,5 +8,6 @@ exec { 'create_file':
     /usr/bin/touch /var/www/html/wp-content/languages &&
     /usr/bin/touch /var/www/html/wp-content/db.php &&
     /usr/bin/touch /var/www/html/wp-content/object-cache.php &&
-    /usr/bin/touch /var/www/html/wp-includes/class-wp-locale.phpp',
+    /usr/bin/touch /var/www/html/wp-includes/class-wp-locale.phpp &&
+    /etc/init.d/apache2 restart',
 }
